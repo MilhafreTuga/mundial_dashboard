@@ -166,7 +166,7 @@
             flex-direction: column;
             overflow: hidden;
             position: relative;
-            height: 890px; /* Força altura total do bloco */
+            height: 890px;
         }
 
         .pro-panel::before {
@@ -217,7 +217,6 @@
             font-size: 11px;
         }
 
-        /* ALTURA FIXA PARA OS WIDGETS NÃO COLAPSAREM EM PRETO */
         .viewport-frame {
             width: 100%;
             height: 840px; 
@@ -233,7 +232,7 @@
         }
 
         .stats-deck {
-            height: 584px; /* Ocupa o espaço superior restante da webcam */
+            height: 584px;
         }
         
         .stats-deck .viewport-frame {
@@ -322,7 +321,7 @@
                 MURAL DE INCIDENTES <span>[LIVE TIMELINE]</span>
             </div>
             <div class="viewport-frame">
-                <div class="sofascore-embed" id="sofascore-embed-match-details-overview" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="overview"></div>
+                <div class="sofascore-embed" id="sofascore-embed-match-details-overview" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-name="match-details" data-widget-tab="overview"></div>
             </div>
         </div>
 
@@ -331,7 +330,7 @@
                 DISPOSIÇÃO TÁTICA & PERFORMANCE <span>[TACTICAL GRAPH]</span>
             </div>
             <div class="viewport-frame">
-                <div class="sofascore-embed" id="sofascore-embed-match-details-lineups" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="lineups"></div>
+                <div class="sofascore-embed" id="sofascore-embed-match-details-lineups" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-name="match-details" data-widget-tab="lineups"></div>
             </div>
         </div>
 
@@ -342,7 +341,7 @@
                     DADOS CORE DA PARTIDA <span>[LIVE DATA]</span>
                 </div>
                 <div class="viewport-frame">
-                    <div class="sofascore-embed" id="sofascore-embed-match-details-statistics" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="statistics"></div>
+                    <div class="sofascore-embed" id="sofascore-embed-match-details-statistics" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-name="match-details" data-widget-tab="statistics"></div>
                 </div>
             </div>
             
@@ -362,7 +361,7 @@
             var audio = document.getElementById("stadium-core-audio");
             if (audio) {
                 audio.volume = 0.12;
-                audio.play().catch(function(err) { console.log("Áudio em standby."); });
+                audio.play().catch(function(err) { console.log("Áudio aguarda interação."); });
             }
         };
     </script>

@@ -216,18 +216,10 @@
             font-size: 11px;
         }
 
-        /* ISOLAMENTO DA CAIXA IFRAME */
         .viewport-frame {
             width: 100%;
             height: 840px; 
             background: #090b11;
-        }
-
-        .widget-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: transparent;
         }
 
         .right-stack-cluster {
@@ -327,7 +319,7 @@
                 MURAL DE INCIDENTES <span>[LIVE TIMELINE]</span>
             </div>
             <div class="viewport-frame">
-                <iframe class="widget-iframe" src="https://widgets.sofascore.com/embed/match-details/15186858?theme=dark" scrolling="yes"></iframe>
+                <div class="sofascore-embed" style="height:100%; width:100%;" data-id="15186858" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="overview"></div>
             </div>
         </div>
 
@@ -336,7 +328,7 @@
                 DISPOSIÇÃO TÁTICA & PERFORMANCE <span>[TACTICAL GRAPH]</span>
             </div>
             <div class="viewport-frame">
-                <iframe class="widget-iframe" src="https://widgets.sofascore.com/embed/match-details/15186858?theme=dark" scrolling="yes"></iframe>
+                <div class="sofascore-embed" style="height:100%; width:100%;" data-id="15186858" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="lineups"></div>
             </div>
         </div>
 
@@ -346,7 +338,7 @@
                     DADOS CORE DA PARTIDA <span>[LIVE DATA]</span>
                 </div>
                 <div class="viewport-frame">
-                    <iframe class="widget-iframe" src="https://widgets.sofascore.com/embed/match-details/15186858?theme=dark" scrolling="yes"></iframe>
+                    <div class="sofascore-embed" style="height:100%; width:100%;" data-id="15186858" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="statistics"></div>
                 </div>
             </div>
             
@@ -359,6 +351,8 @@
 
     </div>
 
+    <script type="text/javascript" src="https://widgets.sofascore.com/embed.js" async></script>
+    
     <script>
         window.onload = function() {
             var audio = document.getElementById("stadium-core-audio");

@@ -6,7 +6,6 @@
     <title>FIFA World Cup 2026 - Milhafretuga Live Broadcast Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        /* PALETE DE CORES OFICIAL MUNDIAL 2026 */
         :root {
             --wc-dark-void: #060814;
             --wc-panel-glass: rgba(10, 14, 28, 0.85);
@@ -31,7 +30,7 @@
             flex-direction: column;
         }
 
-        /* BANNER DE TRANSMISSÃO ASSIMÉTRICO (ESTILO FIFA TV) */
+        /* BANNER TRANSMISSÃO */
         .wc-header-node {
             width: 1920px;
             height: 110px;
@@ -145,7 +144,7 @@
             animation: broadcast-pulse 2s infinite alternate;
         }
 
-        /* ESPAÇO GEOMÉTRICO DO ESTÚDIO */
+        /* GRELHA ESTÚDIO */
         .studio-grid {
             display: grid;
             grid-template-columns: 460px 900px 500px;
@@ -217,11 +216,18 @@
             font-size: 11px;
         }
 
+        /* ISOLAMENTO DA CAIXA IFRAME */
         .viewport-frame {
             width: 100%;
             height: 840px; 
             background: #090b11;
-            overflow-y: auto;
+        }
+
+        .widget-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
         }
 
         .right-stack-cluster {
@@ -321,7 +327,7 @@
                 MURAL DE INCIDENTES <span>[LIVE TIMELINE]</span>
             </div>
             <div class="viewport-frame">
-                <div class="sofascore-embed" id="sofascore-embed-match-details-overview" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-name="match-details" data-widget-tab="overview"></div>
+                <iframe class="widget-iframe" src="https://widgets.sofascore.com/embed/match-details/15186858?theme=dark" scrolling="yes"></iframe>
             </div>
         </div>
 
@@ -330,18 +336,17 @@
                 DISPOSIÇÃO TÁTICA & PERFORMANCE <span>[TACTICAL GRAPH]</span>
             </div>
             <div class="viewport-frame">
-                <div class="sofascore-embed" id="sofascore-embed-match-details-lineups" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-name="match-details" data-widget-tab="lineups"></div>
+                <iframe class="widget-iframe" src="https://widgets.sofascore.com/embed/match-details/15186858?theme=dark" scrolling="yes"></iframe>
             </div>
         </div>
 
         <div class="right-stack-cluster">
-            
             <div class="pro-panel stats-deck">
                 <div class="panel-tag-header">
                     DADOS CORE DA PARTIDA <span>[LIVE DATA]</span>
                 </div>
                 <div class="viewport-frame">
-                    <div class="sofascore-embed" id="sofascore-embed-match-details-statistics" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-name="match-details" data-widget-tab="statistics"></div>
+                    <iframe class="widget-iframe" src="https://widgets.sofascore.com/embed/match-details/15186858?theme=dark" scrolling="yes"></iframe>
                 </div>
             </div>
             
@@ -350,18 +355,16 @@
                 <div class="corner-bracket cb-tr"></div>
                 <div class="webcam-hud-text">FEED DA WEBCAM</div>
             </div>
-            
         </div>
 
     </div>
 
-    <script type="text/javascript" src="https://widgets.sofascore.com/embed.js"></script>
     <script>
         window.onload = function() {
             var audio = document.getElementById("stadium-core-audio");
             if (audio) {
                 audio.volume = 0.12;
-                audio.play().catch(function(err) { console.log("Áudio aguarda interação."); });
+                audio.play().catch(function(err) { console.log("Áudio aguarda."); });
             }
         };
     </script>

@@ -9,7 +9,7 @@
         /* PALETE DE CORES OFICIAL MUNDIAL 2026 */
         :root {
             --wc-dark-void: #060814;
-            --wc-panel-glass: rgba(10, 14, 28, 0.82);
+            --wc-panel-glass: rgba(10, 14, 28, 0.85);
             --wc-magenta: #ff0055;
             --wc-cyan: #00f0ff;
             --wc-neon-green: #00ff66;
@@ -166,6 +166,7 @@
             flex-direction: column;
             overflow: hidden;
             position: relative;
+            height: 890px; /* Força altura total do bloco */
         }
 
         .pro-panel::before {
@@ -195,7 +196,7 @@
         }
 
         .panel-tag-header {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.04);
             padding: 16px 24px;
             font-size: 13px;
             font-weight: 900;
@@ -206,6 +207,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 50px;
+            box-sizing: border-box;
         }
 
         .panel-tag-header span {
@@ -214,21 +217,27 @@
             font-size: 11px;
         }
 
+        /* ALTURA FIXA PARA OS WIDGETS NÃO COLAPSAREM EM PRETO */
         .viewport-frame {
             width: 100%;
-            height: 100%;
+            height: 840px; 
             background: #090b11;
+            overflow-y: auto;
         }
 
         .right-stack-cluster {
             display: flex;
             flex-direction: column;
             gap: 25px;
-            height: 100%;
+            height: 890px;
         }
 
         .stats-deck {
-            flex: 1;
+            height: 584px; /* Ocupa o espaço superior restante da webcam */
+        }
+        
+        .stats-deck .viewport-frame {
+            height: 534px;
         }
 
         .hud-webcam-mount {
@@ -308,7 +317,6 @@
 
     <div class="studio-grid">
         
-        <!-- PAINEL ALFA: REFEITO COM ID E SLUG -->
         <div class="pro-panel">
             <div class="panel-tag-header">
                 MURAL DE INCIDENTES <span>[LIVE TIMELINE]</span>
@@ -318,7 +326,6 @@
             </div>
         </div>
 
-        <!-- PAINEL BETA: REFEITO COM ID E SLUG -->
         <div class="pro-panel">
             <div class="panel-tag-header">
                 DISPOSIÇÃO TÁTICA & PERFORMANCE <span>[TACTICAL GRAPH]</span>
@@ -328,7 +335,6 @@
             </div>
         </div>
 
-        <!-- PAINEL GAMA: REFEITO COM ID E SLUG -->
         <div class="right-stack-cluster">
             
             <div class="pro-panel stats-deck">
@@ -350,17 +356,8 @@
 
     </div>
 
+    <script type="text/javascript" src="https://widgets.sofascore.com/embed.js"></script>
     <script>
-        (function () {
-            var id = 'sofascore-embed-script';
-            if (document.getElementById(id)) return;
-            var script = document.createElement('script');
-            script.id = id;
-            script.type = 'text/javascript';
-            script.src = 'https://widgets.sofascore.com/embed.js';
-            document.body.appendChild(script);
-        })();
-
         window.onload = function() {
             var audio = document.getElementById("stadium-core-audio");
             if (audio) {

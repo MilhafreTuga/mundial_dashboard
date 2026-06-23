@@ -6,7 +6,7 @@
     <title>FIFA World Cup 2026 - Milhafretuga Live Broadcast Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        /* PALETE DE CORES OFICIAL MUNDIAL 2026 (CYBER/PREMIUM BROADCAST) */
+        /* PALETE DE CORES OFICIAL MUNDIAL 2026 */
         :root {
             --wc-dark-void: #060814;
             --wc-panel-glass: rgba(10, 14, 28, 0.82);
@@ -23,7 +23,7 @@
             padding: 0;
             width: 1920px;
             height: 1080px;
-            background-color: transparent; /* Camada alpha perfeita para o OBS */
+            background-color: transparent;
             font-family: 'Montserrat', sans-serif;
             color: #ffffff;
             overflow: hidden;
@@ -46,7 +46,6 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.8);
         }
 
-        /* Linhas Neon de Fibra Ótica Intercaladas */
         .wc-header-node::before {
             content: '';
             position: absolute;
@@ -71,7 +70,6 @@
             z-index: 2;
         }
 
-        /* ÁREA LOGO AUTO-AJUSTÁVEL EM EMBLEMA CUT-OUT */
         .logo-emblem-wrapper {
             display: flex;
             align-items: center;
@@ -107,7 +105,6 @@
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
         }
 
-        /* CENTRAL SCOREBUG CHAMPIONSHIP TYPOGRAPHY */
         .title-core {
             text-align: center;
             position: relative;
@@ -151,14 +148,13 @@
         /* ESPAÇO GEOMÉTRICO DO ESTÚDIO */
         .studio-grid {
             display: grid;
-            grid-template-columns: 460px 900px 500px; /* Layout assimétrico focado no campo tático alargado */
+            grid-template-columns: 460px 900px 500px;
             gap: 25px;
             padding: 30px;
             height: calc(1080px - 110px);
             box-sizing: border-box;
         }
 
-        /* PRO-PAINÉIS GLASSMORPHIC COM CORTES TÁTICOS COPA 2026 */
         .pro-panel {
             background: var(--wc-panel-glass);
             backdrop-filter: blur(14px);
@@ -172,7 +168,6 @@
             position: relative;
         }
 
-        /* Cantoneiras Angulares de Interface de Monitorização */
         .pro-panel::before {
             content: '';
             position: absolute;
@@ -225,7 +220,6 @@
             background: #090b11;
         }
 
-        /* COLUNA DIREITA: DIVISÃO MÁXIMA DE DADOS + WEBCAM */
         .right-stack-cluster {
             display: flex;
             flex-direction: column;
@@ -237,10 +231,9 @@
             flex: 1;
         }
 
-        /* MOLDURA ULTRA-PROFISSIONAL PARA A WEBCAM (16:9 SEAMLESS INTEGRATION) */
         .hud-webcam-mount {
             width: 500px;
-            height: 281px; /* Rácio 16:9 milimetricamente perfeito para a câmara */
+            height: 281px;
             background: rgba(4, 6, 14, 0.5);
             border-radius: 16px;
             border: 2px solid rgba(0, 240, 255, 0.25);
@@ -253,7 +246,6 @@
             overflow: hidden;
         }
 
-        /* Linhas Tácticas de Foco de Câmara (Crosshairs) */
         .hud-webcam-mount::before {
             content: '▲';
             position: absolute;
@@ -263,17 +255,6 @@
             font-size: 8px;
             color: var(--wc-cyan);
             opacity: 0.5;
-        }
-
-        .hud-webcam-mount::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid rgba(255, 0, 85, 0.15);
-            pointer-events: none;
         }
 
         .corner-bracket {
@@ -295,7 +276,6 @@
             pointer-events: none;
         }
 
-        /* ANIMATION ENGINES */
         @keyframes broadcast-pulse {
             0% { background-color: #ff0055; box-shadow: 0 0 15px rgba(255, 0, 85, 0.4); }
             100% { background-color: #b3003b; box-shadow: 0 0 5px rgba(255, 0, 85, 0.1); }
@@ -304,16 +284,13 @@
 </head>
 <body>
 
-    <!-- SISTEMA DE ÁUDIO DE ESTÁDIO EMBUTIDO -->
     <audio id="stadium-core-audio" loop autoplay>
         <source src="estadio.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- ESTÚDIO WC2026: HEADER NODE -->
     <div class="wc-header-node">
         <div class="logo-emblem-wrapper">
             <div class="logo-container-box">
-                <!-- Imagem do teu logo com gestão de proporção nativa -->
                 <img class="stream-logo" src="logo.png" alt="Stream Logo">
             </div>
             <div class="brand-text-ticker">LIVE</div>
@@ -329,43 +306,40 @@
         <div class="live-ticker-badge">ON AIR</div>
     </div>
 
-    <!-- ESTÚDIO WC2026: GRELHA DE TRIPLE COMPONENTES -->
     <div class="studio-grid">
         
-        <!-- PAINEL ALFA: CRONOLOGIA DE EVENTOS VIVOS -->
+        <!-- PAINEL ALFA: REFEITO COM ID E SLUG -->
         <div class="pro-panel">
             <div class="panel-tag-header">
                 MURAL DE INCIDENTES <span>[LIVE TIMELINE]</span>
             </div>
             <div class="viewport-frame">
-                <div class="sofascore-embed" data-id="15186858" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="overview"></div>
+                <div class="sofascore-embed" id="sofascore-embed-match-details-overview" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="overview"></div>
             </div>
         </div>
 
-        <!-- PAINEL BETA: ALINHAMENTOS E CAMPO DIGITAL (MÁXIMA LARGURA PARA RESOLUÇÃO HORIZONTAL) -->
+        <!-- PAINEL BETA: REFEITO COM ID E SLUG -->
         <div class="pro-panel">
             <div class="panel-tag-header">
                 DISPOSIÇÃO TÁTICA & PERFORMANCE <span>[TACTICAL GRAPH]</span>
             </div>
             <div class="viewport-frame">
-                <div class="sofascore-embed" data-id="15186858" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="lineups"></div>
+                <div class="sofascore-embed" id="sofascore-embed-match-details-lineups" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="lineups"></div>
             </div>
         </div>
 
-        <!-- PAINEL GAMA: MATRIX DE COMPARAÇÃO + ENCAIXE DE WEBCAM -->
+        <!-- PAINEL GAMA: REFEITO COM ID E SLUG -->
         <div class="right-stack-cluster">
             
-            <!-- Bloco Superior: Estatísticas Avançadas -->
             <div class="pro-panel stats-deck">
                 <div class="panel-tag-header">
                     DADOS CORE DA PARTIDA <span>[LIVE DATA]</span>
                 </div>
                 <div class="viewport-frame">
-                    <div class="sofascore-embed" data-id="15186858" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="statistics"></div>
+                    <div class="sofascore-embed" id="sofascore-embed-match-details-statistics" data-id="15186858" data-slug="uzbekistan-portugal" data-widget-theme="dark" data-widget-type="match-details" data-widget-tab="statistics"></div>
                 </div>
             </div>
             
-            <!-- Bloco Inferior: Estúdio de Vídeo da Cam (16:9 Integrado) -->
             <div class="hud-webcam-mount">
                 <div class="corner-bracket cb-tl"></div>
                 <div class="corner-bracket cb-tr"></div>
@@ -377,7 +351,6 @@
     </div>
 
     <script>
-        /* INJEÇÃO DO SCRIPT DATA-STREAM ENGINE DO SOFASCORE */
         (function () {
             var id = 'sofascore-embed-script';
             if (document.getElementById(id)) return;
@@ -388,14 +361,11 @@
             document.body.appendChild(script);
         })();
 
-        /* AUTOMATION AUDIO MANAGER FOR OBS BROADCASTS */
         window.onload = function() {
             var audio = document.getElementById("stadium-core-audio");
             if (audio) {
-                audio.volume = 0.12; // Calibrado perfeitamente para som de pavilhão de fundo
-                audio.play().catch(function(err) { 
-                    console.log("OBS: Áudio aguarda inicialização da transmissão."); 
-                });
+                audio.volume = 0.12;
+                audio.play().catch(function(err) { console.log("Áudio em standby."); });
             }
         };
     </script>
